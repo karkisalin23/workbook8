@@ -1,0 +1,38 @@
+<!-- new_todo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New ToDo</title>
+  </head>
+  <body>
+    <h1>New ToDo</h1>
+
+    <form id="newTodoForm">
+      <label for="userDropdown">Select User:</label>
+      <select id="userDropdown" name="userid"></select>
+
+      <label for="categoryDropdown">Select Category:</label>
+      <select id="categoryDropdown" name="category"></select>
+
+      <label for="priorityDropdown">Select Priority:</label>
+      <select id="priorityDropdown" name="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea>
+
+      <label for="deadline">Deadline:</label>
+      <input type="text" id="deadline" name="deadline" placeholder="YYYY-MM-DD" />
+
+      <!-- Submit button -->
+      <button type="button" onclick="addTodo()">Add ToDo</button>
+    </form>
+
+    <script src="scripts/new_todos.js"></script>
+  </body>
+</html>
