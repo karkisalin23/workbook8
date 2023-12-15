@@ -35,7 +35,7 @@
           .then((response) => response.json())
           .then((todos) => {
             const todoList = document.getElementById("todoList");
-            todoList.innerHTML = ""; // Clear previous entries
+            todoList.innerHTML = "";
             todos.forEach((todo) => {
               const todoItem = document.createElement("div");
               todoItem.textContent = `Description: ${todo.description}, Deadline: ${todo.deadline}`;
