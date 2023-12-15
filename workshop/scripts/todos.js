@@ -1,3 +1,4 @@
+"use strict";
 function fetchAllToDos() {
   fetch("http://localhost:8083/api/todos")
     .then((response) => response.json())
