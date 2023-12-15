@@ -17,19 +17,14 @@
     </header>
 
     <main>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Deadline</th>
-            <th>Priority</th>
-          </tr>
-        </thead>
-        <tbody id="todoList"></tbody>
-      </table>
+      <label for="userDropdown">Select User:</label>
+      <select id="userDropdown">
+        <option value="">Select...</option>
+      </select>
+
+      <div id="todoList"></div>
     </main>
+
     <script src="scripts/todos.js"></script>
   </body>
 </html>
