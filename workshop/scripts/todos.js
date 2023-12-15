@@ -22,9 +22,23 @@ function loadTodos() {
         todoList.innerHTML = "";
 
         todos.forEach((todo) => {
-          const todoItem = document.createElement("div");
-          todoItem.textContent = `Description: ${todo.description}, Deadline: ${todo.deadline}, Priority: ${todo.priority}`;
-          todoList.appendChild(todoItem);
+          const row = document.createElement("tr");
+          const categoryCell = document.createElement("td");
+          const descriptionCell = document.createElement("td");
+          const deadlineCell = document.createElement("td");
+          const priorityCell = document.createElement("td");
+
+          categoryCell.textContent = todo.category;
+          descriptionCell.textContent = todo.description;
+          deadlineCell.textContent = todo.deadline;
+          priorityCell.textContent = todo.priority;
+
+          row.appendChild(categoryCell);
+          row.appendChild(descriptionCell);
+          row.appendChild(deadlineCell);
+          row.appendChild(priorityCell);
+
+          todoList.appendChild(row);
         });
       });
   });
