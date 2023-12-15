@@ -16,6 +16,32 @@
       </nav>
     </header>
 
+    <main>
+      <form>
+        <label>Select User:</label>
+        <select></select>
+
+        <label>Select Category:</label>
+        <select></select>
+
+        <label>Select Priority:</label>
+        <select>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <label>Description:</label>
+        <textarea></textarea>
+
+        <label>Deadline:</label>
+        <input type="text" id="deadline" name="deadline" placeholder="YYYY-MM-DD" />
+
+        <!-- Submit button -->
+        <button type="button" onclick="addTodo()">Add ToDo</button>
+      </form>
+    </main>
+
     <script src="scripts/new_todos.js"></script>
   </body>
 </html>
