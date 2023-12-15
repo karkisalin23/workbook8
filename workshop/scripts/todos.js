@@ -2,7 +2,6 @@ function loadTodos() {
   const userDropdown = document.getElementById("userDropdown");
   const todoList = document.getElementById("todoList");
 
-  // Fetch users and populate dropdown
   fetch("http://localhost:8083/api/users")
     .then((response) => response.json())
     .then((users) => {
@@ -14,18 +13,14 @@ function loadTodos() {
       });
     });
 
-  // Event listener for user selection
   userDropdown.addEventListener("change", () => {
     const selectedUserId = userDropdown.value;
 
-    // Fetch todos for the selected user
     fetch(`http://localhost:8083/api/todos/byuser/${selectedUserId}`)
       .then((response) => response.json())
       .then((todos) => {
-        // Clear previous todoList content
         todoList.innerHTML = "";
 
-        // Display todos in the todoList
         todos.forEach((todo) => {
           const todoItem = document.createElement("div");
           todoItem.textContent = `Description: ${todo.description}, Deadline: ${todo.deadline}, Priority: ${todo.priority}`;
