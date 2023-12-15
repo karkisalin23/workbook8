@@ -1,0 +1,26 @@
+### Inserts/Creates one new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Craig Flayer",
+  "username": "cflayer",
+  "email": "cflayer.biz",
+  "address": {
+    "street": "Moxy Trail",
+    "suite": "Suite 280",
+    "city": "Howbout",
+    "zipcode": "58804-1099",
+    "geo": {
+      "lat": "24.8918",
+      "lng": "21.8984"
+    }
+  },
+  "phone": "210.067.6132",
+  "website": "flayergroup.io",
+  "company": {
+    "name": "Flayer Group",
+    "catchPhrase": "Configurable multimedia task-force",
+    "bs": "generate enterprise e-tailers"
+  }
+}

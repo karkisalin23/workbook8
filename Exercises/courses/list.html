@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="list.html" class="active">Courses</a>
+      </nav>
+    </header>
+    <main>
+      <div class="link-bar">
+        <a class="" href="add.html">Add Course</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td>Course Number</td>
+            <td>Course Name</td>
+            <td>Department</td>
+            <td>Instructor</td>
+            <td>Start Date</td>
+            <td>Length</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody id="coursesTableBody"></tbody>
+      </table>
+    </main>
+    <script>
+      const coursesTableBody = document.querySelector("#coursesTableBody");
+
+      //functions
+      function loadCourses() {
+        fetch("http://localhost:3000/courses")
+          .then(function parseBody(response) {
+            return response.json();
+          })
+          .then(function (courses) {
+            displayCourses(courses);
+          });
+      }
+
+      function displayCourses(courses) {
+        for (const course of courses) {
+          buildCourseTableRow(course);
+        }
+      }
+
+      function buildCourseTableRow(course) {
+        let row = coursesTableBody.insertRow();
+
+        let td1 = row.insertCell();
+        td1.innerText = course.courseNum;
+
+        let td2 = row.insertCell();
+        td2.innerText = course.courseName;
+
+        let td3 = row.insertCell();
+        td3.innerText = course.dept;
+
+        let td4 = row.insertCell();
+        td4.innerText = course.instructor;
+
+        let td5 = row.insertCell();
+        td5.innerText = course.startDate;
+
+        let td6 = row.insertCell();
+        td6.innerText = course.numDays;
+
+     
+
+        let td8 = row.insertCell();
+        let a1 = document.createElement("a");
+        a1.innerText = "edit";
+        a1.href = "edit.html";
+        td8.appendChild(a1);
+
+        let td9 = row.insertCell();
+        let a2 = document.createElement("a");
+        a2.innerText = "delete";
+        a2.href = "delete.html";
+        td9.appendChild(a2);
+      }
+
+      window.onload = function initialize() {
+        loadCourses();
+      };
+    </script>
+  </body>
+</html>

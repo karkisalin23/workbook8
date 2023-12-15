@@ -1,0 +1,8 @@
+PUT http://localhost:3000/todos/17
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "title": "do that thing, do that thing again!",
+  "completed": true,
+}
