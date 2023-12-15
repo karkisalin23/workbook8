@@ -3,37 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDos List</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <nav>
-        <h1>ToDos List</h1>
+        <h1>ToDo List</h1>
 
         <a href="todos.html">Home</a>
         <a href="new_todos.html">ToDos</a>
       </nav>
     </header>
 
-    <body>
-      <table>
-        <thead>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </thead>
-        <tbody id="WorkshopTableBody"></tbody>
-      </table>
-    </body>
-
-    <script src="scripts/todos.js"></script>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Deadline</th>
+        </tr>
+      </thead>
+      <tbody id="todoList"></tbody>
+    </table>
   </body>
 </html>
