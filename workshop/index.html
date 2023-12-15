@@ -4,18 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stay Organized</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <nav>
-        <h1>Stay Organized</h1>
+        <h1>ToDos List</h1>
 
-        <a href="todos.html">Home</a>
-        <a href="new_todos.html">ToDos</a>
+        <a href="index.html">Home</a>
+        <a href="todos.html">ToDos</a>
+        <a href="new_todos.html">AddToDos</a>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Deadline</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody id="todoList"></tbody>
+      </table>
+    </main>
     <footer></footer>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
